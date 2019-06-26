@@ -1,0 +1,30 @@
+﻿@using BOL;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2> Product Catalog</h2>
+
+@{
+    List<Product> products = this.ViewData["products"] as List<Product>;
+
+}
+
+
+<ol>
+    @{
+        foreach (Product p in products)
+        {
+
+
+    <h4>
+        <p>
+            @p.ID
+            @p.Title
+            @p.Description
+        </p>
+    </h4>
+        }
+    }
+
+</ol>
